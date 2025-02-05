@@ -1,0 +1,100 @@
+/* Apply general styling to the body */
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: 'Arial', sans-serif; /* Simple font family */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Style the content div */
+.content {
+    width: 80%;
+    height: 50%;
+    background-color: #ffcc00; /* Yellow background */
+    border: 5px solid #333333; /* Dark border */
+    position: relative;
+    z-index: 1; /* Ensure it is behind the overlay */
+    margin: 50px auto;
+    padding: 20px;
+    opacity: 0; /* Start with 0% opacity */
+    animation: fadeIn 2s ease-in forwards; /* Apply the fadeIn animation */
+}
+
+/* Texture effect with text inside the content div */
+.texture {
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    color: #444444;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with 0% opacity */
+    }
+    100% {
+        opacity: 1; /* End with 100% opacity */
+    }
+}
+
+/* Style for the overlay div */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    z-index: 2; /* Ensure it is on top of content */
+}
+
+/* Decorative circle element */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #00ffcc; /* Cyan color */
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 3; /* Ensure it is above overlay */
+}
+
+/* Decorative rectangle element */
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: #ff3399; /* Pink color */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+/* Link styled as a decorative element */
+.link {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 150px;
+    height: 30px;
+    background-color: #ff9900; /* Orange background */
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 4;
+    transform: translateX(-50%);
+}
+
+.link:hover {
+    background-color: #ff6600; /* Darker orange on hover */
+}
